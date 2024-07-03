@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
 
 function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -62,7 +61,7 @@ function App() {
     const hexDownload = () =>
       exportStrAsDownload(hexStr, `${file?.name}-hexDump.txt`);
     const asciiDownload = () =>
-      exportStrAsDownload(asciiStr, `${file?.name}asciiDump.txt`);
+      exportStrAsDownload(asciiStr, `${file?.name}-asciiDump.txt`);
 
     return (
       <div>
