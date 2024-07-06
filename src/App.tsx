@@ -20,7 +20,7 @@ function App() {
     const NUM_COLS_HEX = 8;
     const NUM_COLS_ASCII = NUM_COLS_HEX * 2; // bc 1 col for hex is actually 2 hex digits = 1 byte = 1 ascii
 
-    const rawAscii: string = new TextDecoder().decode(currBuffer);
+    const rawAscii: string = new TextDecoder("ISO-8859-2").decode(currBuffer);
     let hexStr: string = "";
     let asciiStr: string = "";
     let counterHex: number = 0;
@@ -159,7 +159,8 @@ function App() {
   return (
     <>
       <h1 className="flex justify-center text-5xl font-bold underline p-5">
-        Submit a file to see its byte values as hex and ascii
+        Submit a file to see its byte values as hex and ISO-8859-2 encoding
+        (extended ASCII)
       </h1>
       <form onSubmit={handleSubmit}>
         <div className="flex justify-center">
